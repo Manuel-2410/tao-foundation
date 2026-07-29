@@ -1,30 +1,35 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:tao/main.dart';
+import 'package:provider/provider.dart';
+import 'package:tao/models/app_section.dart';
+import 'package:tao/providers/navigation_provider.dart';
+import 'package:tao/screens/home/dashboard_content.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const TaoApp());
+  testWidgets('inicio muestra el módulo del manual de usuario', (tester) async {
+    await tester.pumpWidget(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ],
+        child: const MaterialApp(home: Scaffold(body: DashboardContent())),
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Manual de usuario'), findsOneWidget);
+    expect(find.text('Ver manual'), findsOneWidget);
+    expect(
+      find.text('Documento oficial · 14 páginas · Solo lectura'),
+      findsOneWidget,
+    );
+    expect(find.byIcon(Icons.upload_file), findsNothing);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  test('la navegación incluye la sección del manual', () {
+    final navigation = NavigationProvider();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    navigation.changeSection(AppSection.manualUsuario);
+
+    expect(navigation.current, AppSection.manualUsuario);
   });
 }

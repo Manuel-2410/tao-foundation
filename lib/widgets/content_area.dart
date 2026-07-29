@@ -12,52 +12,34 @@ import '../screens/diagnostico/sintomas_screen.dart';
 import '../screens/videos/videos_screen.dart';
 import '../screens/clinicas/clinica_screen.dart';
 import '../screens/proceso_lead/proceso_lead_screen.dart';
+import '../screens/manual/manual_screen.dart';
 
 import '../data/cincoy10_data.dart' as cinco_diez_data;
 import '../data/zona_rio_data.dart';
 
-
-class ContentArea
-    extends StatelessWidget {
-
-  const ContentArea({
-    super.key,
-  });
+class ContentArea extends StatelessWidget {
+  const ContentArea({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-    return Consumer<
-        NavigationProvider>(
-      builder:
-          (
-        context,
-        nav,
-        child,
-      ) {
-
-        switch (
-            nav.current) {
-
+    return Consumer<NavigationProvider>(
+      builder: (context, nav, child) {
+        switch (nav.current) {
           case AppSection.home:
             return const DashboardContent();
 
           case AppSection.clinicaZonaRio:
             return ClinicaScreen(
-              titulo:
-                  "ZONA RIO",
+              titulo: "ZONA RIO",
 
-              tratamientos:
-                  tratamientosZonaRio,
+              tratamientos: tratamientosZonaRio,
             );
 
           case AppSection.clinicaCincoDiez:
             return ClinicaScreen(
-              titulo:
-                  "5 y 10",
+              titulo: "5 y 10",
 
-              tratamientos:
-                  cinco_diez_data.tratamientosZonaRio,
+              tratamientos: cinco_diez_data.tratamientosZonaRio,
             );
 
           case AppSection.contacto:
@@ -74,6 +56,9 @@ class ContentArea
 
           case AppSection.videos:
             return const VideosScreen();
+
+          case AppSection.manualUsuario:
+            return const ManualScreen();
         }
       },
     );

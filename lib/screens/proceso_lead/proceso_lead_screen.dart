@@ -316,7 +316,7 @@ class _HeaderTitle extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          'Manual De La Cruz  |  Junio 29, 2023',
+          'Manual De La Cruz  |  Junio 29, 2026',
           style: TextStyle(color: colors.onSurfaceVariant, fontSize: 14),
         ),
       ],

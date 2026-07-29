@@ -112,6 +112,12 @@ class _AppSidebarState extends State<AppSidebar> {
                     'Videos',
                     AppSection.videos,
                   ),
+                  _menu(
+                    context,
+                    Icons.menu_book_outlined,
+                    'Manual',
+                    AppSection.manualUsuario,
+                  ),
                 ],
               ),
             ),

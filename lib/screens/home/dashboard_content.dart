@@ -4,17 +4,13 @@ import 'package:provider/provider.dart';
 import '../../models/app_section.dart';
 import '../../providers/navigation_provider.dart';
 import '../../widgets/dashboard_card.dart';
+import '../../widgets/manual_upload_card.dart';
 
 class DashboardContent extends StatelessWidget {
   const DashboardContent({super.key});
 
-  void _openSection(
-    BuildContext context,
-    AppSection section,
-  ) {
-    context.read<NavigationProvider>().changeSection(
-          section,
-        );
+  void _openSection(BuildContext context, AppSection section) {
+    context.read<NavigationProvider>().changeSection(section);
   }
 
   @override
@@ -39,30 +35,21 @@ class DashboardContent extends StatelessWidget {
 
           const Text(
             "TAO Acupuntura",
-            style: TextStyle(
-              fontSize: 42,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 10),
 
           const Text(
             "Terapia Oriental Integral",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.grey,
-            ),
+            style: TextStyle(fontSize: 18, color: Colors.grey),
           ),
 
           const SizedBox(height: 40),
 
           const Text(
             "Clínicas",
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 20),
@@ -94,12 +81,8 @@ class DashboardContent extends StatelessWidget {
                     subtitle: "Sucursal Zona Río",
                     image: "assets/images/rio.png",
 
-                    onTap: () 
-                    {
-                      _openSection(
-                        context,
-                        AppSection.clinicaZonaRio,
-                      );
+                    onTap: () {
+                      _openSection(context, AppSection.clinicaZonaRio);
                     },
                   ),
 
@@ -107,20 +90,18 @@ class DashboardContent extends StatelessWidget {
                     title: "5 y 10",
                     subtitle: "Sucursal 5 y 10",
                     image: "assets/images/c5y10.png",
-                    onTap: () 
-                    {
-                      _openSection(
-                        context,
-                        AppSection.clinicaCincoDiez,
-                      );
+                    onTap: () {
+                      _openSection(context, AppSection.clinicaCincoDiez);
                     },
                   ),
-
-                  
                 ],
               );
             },
           ),
+
+          const SizedBox(height: 50),
+
+          const ManualUploadCard(compact: true),
 
           const SizedBox(height: 50),
 
@@ -142,15 +123,11 @@ class DashboardContent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
 
                 children: [
-                  Expanded(
-                    child: _mensajes(context),
-                  ),
+                  Expanded(child: _mensajes(context)),
 
                   const SizedBox(width: 40),
 
-                  Expanded(
-                    child: _herramientas(context),
-                  ),
+                  Expanded(child: _herramientas(context)),
                 ],
               );
             },
@@ -173,59 +150,38 @@ class DashboardContent extends StatelessWidget {
           children: [
             const Text(
               "Mensajes",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 15),
 
             ListTile(
-              leading: const CircleAvatar(
-                child: Icon(Icons.message),
-              ),
+              leading: const CircleAvatar(child: Icon(Icons.message)),
 
               title: const Text("Contacto Inicial"),
 
-              subtitle: const Text(
-                "Enviar mensaje inicial",
-              ),
+              subtitle: const Text("Enviar mensaje inicial"),
 
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
 
               onTap: () {
-                _openSection(
-                  context,
-                  AppSection.contacto,
-                );
+                _openSection(context, AppSection.contacto);
               },
             ),
 
             const Divider(),
 
             ListTile(
-              leading: const CircleAvatar(
-                child: Icon(Icons.chat),
-              ),
+              leading: const CircleAvatar(child: Icon(Icons.chat)),
 
               title: const Text("Seguimiento"),
 
-              subtitle: const Text(
-                "Seguimiento de pacientes",
-              ),
+              subtitle: const Text("Seguimiento de pacientes"),
 
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
 
               onTap: () {
-                _openSection(
-                  context,
-                  AppSection.seguimiento,
-                );
+                _openSection(context, AppSection.seguimiento);
               },
             ),
           ],
@@ -245,59 +201,38 @@ class DashboardContent extends StatelessWidget {
           children: [
             const Text(
               "Herramientas",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 15),
 
             ListTile(
-              leading: const CircleAvatar(
-                child: Icon(Icons.psychology),
-              ),
+              leading: const CircleAvatar(child: Icon(Icons.psychology)),
 
               title: const Text("Síntomas"),
 
-              subtitle: const Text(
-                "Explorar síntomas",
-              ),
+              subtitle: const Text("Explorar síntomas"),
 
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
 
               onTap: () {
-                _openSection(
-                  context,
-                  AppSection.sintomas,
-                );
+                _openSection(context, AppSection.sintomas);
               },
             ),
 
             const Divider(),
 
             ListTile(
-              leading: const CircleAvatar(
-                child: Icon(Icons.play_circle),
-              ),
+              leading: const CircleAvatar(child: Icon(Icons.play_circle)),
 
               title: const Text("Videos"),
 
-              subtitle: const Text(
-                "Testimonios y procesos",
-              ),
+              subtitle: const Text("Testimonios y procesos"),
 
-              trailing: const Icon(
-                Icons.arrow_forward_ios,
-              ),
+              trailing: const Icon(Icons.arrow_forward_ios),
 
               onTap: () {
-                _openSection(
-                  context,
-                  AppSection.videos,
-                );
+                _openSection(context, AppSection.videos);
               },
             ),
           ],

@@ -7,4 +7,5 @@ enum AppSection {
   procesoVentas,
   sintomas,
   videos,
+  manualUsuario,
 }
