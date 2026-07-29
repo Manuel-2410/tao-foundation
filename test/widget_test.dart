@@ -19,7 +19,7 @@ void main() {
     expect(find.text('Manual de usuario'), findsOneWidget);
     expect(find.text('Ver manual'), findsOneWidget);
     expect(
-      find.text('Documento oficial · 14 páginas · Solo lectura'),
+      find.text('Documento oficial · 16 páginas · Solo lectura'),
       findsOneWidget,
     );
     expect(find.byIcon(Icons.upload_file), findsNothing);

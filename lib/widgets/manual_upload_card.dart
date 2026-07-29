@@ -76,7 +76,7 @@ class ManualUploadCard extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                         SizedBox(height: 4),
-                        Text('Documento oficial · 14 páginas · Solo lectura'),
+                        Text('Documento oficial · 16 páginas · Solo lectura'),
                       ],
                     ),
                   ),
