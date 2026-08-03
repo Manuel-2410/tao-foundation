@@ -20,31 +20,23 @@ void main() {
       expect(validCategories, contains(sintoma.categoria));
       expect(sintoma.descripcion.length, greaterThan(100));
       expect(sintoma.comoayuda.length, greaterThan(100));
-
-      for (final spinText in [
-        sintoma.situacion,
-        sintoma.problema,
-        sintoma.implicacion,
-        sintoma.necesidad,
-      ]) {
-        expect(spinText.split('\n'), hasLength(greaterThanOrEqualTo(3)));
-        expect('¿'.allMatches(spinText), hasLength(greaterThanOrEqualTo(3)));
-        expect('?'.allMatches(spinText), hasLength(greaterThanOrEqualTo(3)));
-      }
+      expect(sintoma.objetivos.length, greaterThan(100));
+      expect(sintoma.resultados.length, greaterThan(100));
+      expect(sintoma.objetivos, isNot(contains('¿')));
+      expect(sintoma.resultados, isNot(contains('¿')));
     }
   });
 
-  test('SPIN sections are not duplicated between symptoms', () {
-    final spinSections = <String>{};
+  test('acupuncture sections are not duplicated between symptoms', () {
+    final sections = <String>{};
 
     for (final sintoma in sintomas) {
-      for (final spinText in [
-        sintoma.situacion,
-        sintoma.problema,
-        sintoma.implicacion,
-        sintoma.necesidad,
+      for (final text in [
+        sintoma.comoayuda,
+        sintoma.objetivos,
+        sintoma.resultados,
       ]) {
-        expect(spinSections.add(spinText), isTrue);
+        expect(sections.add(text), isTrue);
       }
     }
   });

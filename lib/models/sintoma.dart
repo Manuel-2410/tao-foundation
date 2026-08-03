@@ -1,16 +1,15 @@
 class Sintoma {
-
   final String nombre;
   final String categoria;
   final String imagen;
   final String descripcion;
   final String comoayuda;
+  final String objetivos;
+  final String resultados;
   final String situacion;
   final String problema;
   final String implicacion;
   final String necesidad;
-
-
 
   Sintoma({
     required this.nombre,
@@ -18,6 +17,8 @@ class Sintoma {
     required this.imagen,
     required this.descripcion,
     required this.comoayuda,
+    required this.objetivos,
+    required this.resultados,
     required this.situacion,
     required this.problema,
     required this.implicacion,

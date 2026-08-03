@@ -15,15 +15,13 @@ class SintomasScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => SintomasProvider(),
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("SÍNTOMAS"),
-        ),
+        appBar: AppBar(title: const Text("SÍNTOMAS")),
         body: Consumer<SintomasProvider>(
           builder: (context, provider, child) {
             final filtrados = sintomas.where((s) {
-              final coincideBusqueda = s.nombre
-                  .toLowerCase()
-                  .contains(provider.busqueda.toLowerCase());
+              final coincideBusqueda = s.nombre.toLowerCase().contains(
+                provider.busqueda.toLowerCase(),
+              );
 
               final coincideCategoria =
                   provider.categoria == "Todas" ||
@@ -113,7 +111,6 @@ class SintomasScreen extends StatelessWidget {
                           provider.cambiarCategoria("Clínico");
                         },
                       ),
-                      
                     ],
                   ),
                 ),
@@ -124,9 +121,9 @@ class SintomasScreen extends StatelessWidget {
                     itemCount: filtrados.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      childAspectRatio: .8,
-                    ),
+                          crossAxisCount: 3,
+                          childAspectRatio: .8,
+                        ),
                     itemBuilder: (context, index) {
                       final Sintoma item = filtrados[index];
                       return SintomaCard(
@@ -148,110 +145,79 @@ class SintomasScreen extends StatelessWidget {
   }
 
   void mostrarDetalle(BuildContext context, Sintoma sintoma) {
-  showDialog(
-    context: context,
-    builder: (_) {
-      return AlertDialog(
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(sintoma.nombre),
-            const SizedBox(height: 8),
-            Chip(
-              label: Text(sintoma.categoria),
-            ),
-          ],
-        ),
-        content: SizedBox(
-          width: 500,
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  sintoma.descripcion,
-                  style: const TextStyle(height: 1.45),
-                ),
-
-                const SizedBox(height: 20),
-
-                const Text(
-                  "Cómo ayuda",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
+    showDialog(
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(sintoma.nombre),
+              const SizedBox(height: 8),
+              Chip(label: Text(sintoma.categoria)),
+            ],
+          ),
+          content: SizedBox(
+            width: 500,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    sintoma.descripcion,
+                    style: const TextStyle(height: 1.45),
                   ),
-                ),
 
-                const SizedBox(height: 8),
+                  const SizedBox(height: 24),
 
-                Text(
-                  sintoma.comoayuda,
-                  style: const TextStyle(height: 1.45),
-                ),
+                  const Divider(),
 
-                const SizedBox(height: 24),
+                  const SizedBox(height: 18),
 
-                const Divider(),
-
-                const SizedBox(height: 18),
-
-                const Text(
-                  "Método SPIN",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  const Text(
+                    "Acupuntura para este síntoma",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                ),
 
-                const SizedBox(height: 16),
+                  const SizedBox(height: 16),
 
-                _buildSpinCard(
-                  color: const Color(0xFF1E88E5),
-                  letra: "S",
-                  titulo: "Situación",
-                  texto: sintoma.situacion,
-                ),
+                  _buildInfoCard(
+                    color: const Color(0xFF1E88E5),
+                    icono: Icons.health_and_safety_outlined,
+                    titulo: "Cómo ayuda la acupuntura",
+                    texto: sintoma.comoayuda,
+                  ),
 
-                const SizedBox(height: 12),
+                  const SizedBox(height: 12),
 
-                _buildSpinCard(
-                  color: const Color(0xFFF9A825),
-                  letra: "P",
-                  titulo: "Problema",
-                  texto: sintoma.problema,
-                ),
+                  _buildInfoCard(
+                    color: const Color(0xFFF9A825),
+                    icono: Icons.flag_outlined,
+                    titulo: "Objetivos",
+                    texto: sintoma.objetivos,
+                  ),
 
-                const SizedBox(height: 12),
+                  const SizedBox(height: 12),
 
-                _buildSpinCard(
-                  color: const Color(0xFFE53935),
-                  letra: "I",
-                  titulo: "Implicación",
-                  texto: sintoma.implicacion,
-                ),
-
-                const SizedBox(height: 12),
-
-                _buildSpinCard(
-                  color: const Color(0xFF43A047),
-                  letra: "N",
-                  titulo: "Necesidad",
-                  texto: sintoma.necesidad,
-                ),
-              ],
+                  _buildInfoCard(
+                    color: const Color(0xFF43A047),
+                    icono: Icons.trending_up,
+                    titulo: "Resultados esperados",
+                    texto: sintoma.resultados,
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      );
-    },
-  );
-}
+        );
+      },
+    );
+  }
 
-    Widget _buildSpinCard({
+  Widget _buildInfoCard({
     required Color color,
-    required String letra,
+    required IconData icono,
     required String titulo,
     required String texto,
   }) {
@@ -261,9 +227,7 @@ class SintomasScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: color.withValues(alpha: .08),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: color.withValues(alpha: .35),
-        ),
+        border: Border.all(color: color.withValues(alpha: .35)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -271,19 +235,9 @@ class SintomasScreen extends StatelessWidget {
           Container(
             width: 38,
             height: 38,
-            decoration: BoxDecoration(
-              color: color,
-              shape: BoxShape.circle,
-            ),
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
             alignment: Alignment.center,
-            child: Text(
-              letra,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-            ),
+            child: Icon(icono, color: Colors.white, size: 21),
           ),
           const SizedBox(width: 14),
           Expanded(
@@ -299,13 +253,7 @@ class SintomasScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 6),
-                Text(
-                  texto,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    height: 1.45,
-                  ),
-                ),
+                Text(texto, style: const TextStyle(fontSize: 14, height: 1.45)),
               ],
             ),
           ),
