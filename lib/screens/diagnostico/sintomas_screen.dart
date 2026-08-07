@@ -6,6 +6,7 @@ import '../../models/sintoma.dart';
 import '../../providers/sintomas_provider.dart';
 import '../../widgets/sintoma_card.dart';
 import '../../widgets/category_chip.dart';
+import 'comparador_tratamientos_dialog.dart';
 
 class SintomasScreen extends StatelessWidget {
   const SintomasScreen({super.key});
@@ -205,6 +206,32 @@ class SintomasScreen extends StatelessWidget {
                     icono: Icons.trending_up,
                     titulo: "Resultados esperados",
                     texto: sintoma.resultados,
+                  ),
+
+                  const SizedBox(height: 12),
+
+                  _buildInfoCard(
+                    color: const Color(0xFF8E24AA),
+                    icono: Icons.spa_outlined,
+                    titulo: "Complementos o tratamientos sugeridos",
+                    texto: sintoma.complementos,
+                  ),
+
+                  const SizedBox(height: 18),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton.icon(
+                      icon: const Icon(Icons.compare_arrows),
+                      label: const Text('Comparar opciones'),
+                      onPressed: () {
+                        showDialog<void>(
+                          context: context,
+                          builder: (_) =>
+                              ComparadorTratamientosDialog(sintoma: sintoma),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

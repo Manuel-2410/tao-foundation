@@ -30,6 +30,7 @@ class ContentArea extends StatelessWidget {
 
           case AppSection.clinicaZonaRio:
             return ClinicaScreen(
+              key: const ValueKey(AppSection.clinicaZonaRio),
               titulo: "ZONA RIO",
 
               tratamientos: tratamientosZonaRio,
@@ -37,6 +38,7 @@ class ContentArea extends StatelessWidget {
 
           case AppSection.clinicaCincoDiez:
             return ClinicaScreen(
+              key: const ValueKey(AppSection.clinicaCincoDiez),
               titulo: "5 y 10",
 
               tratamientos: cinco_diez_data.tratamientosZonaRio,

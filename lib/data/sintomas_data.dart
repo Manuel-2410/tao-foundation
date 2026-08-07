@@ -13,6 +13,8 @@ final sintomas = [
         'Disminuir la intensidad y frecuencia de la molestia, reducir la tensión asociada al estrés y favorecer una digestión más cómoda junto con el manejo médico y alimentario indicado.',
     resultados:
         'Se espera una reducción gradual del dolor o ardor y mayor comodidad después de comer. La evolución se valora registrando intensidad, duración y frecuencia de los episodios.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden apoyar el manejo del estrés relacionado con la molestia digestiva. Un diagnóstico nutricional ayuda a identificar hábitos, alimentos y horarios asociados, como complemento de la valoración médica.',
     situacion:
         '¿En qué parte del abdomen siente el dolor y desde cuándo comenzó?\n¿Aparece antes o después de comer, durante la noche o en momentos de estrés?\n¿Ya recibió un diagnóstico o tratamiento para esta molestia?',
     problema:
@@ -34,6 +36,8 @@ final sintomas = [
         'Reducir el dolor irradiado y la tensión lumbar o glútea, facilitar la movilidad y apoyar el regreso progresivo a las actividades indicadas en el plan médico o de rehabilitación.',
     resultados:
         'Puede lograrse menos dolor al caminar, sentarse o dormir y una movilidad más cómoda. El progreso se mide por intensidad del dolor, distancia caminada y actividades recuperadas.',
+    complementos:
+        'Fisioterapia para movilidad, fuerza y postura; terapia de ventosas o masaje relajante para la tensión muscular. Un diagnóstico nutricional puede detectar factores que influyan en inflamación, peso y recuperación, tras descartar signos de alarma.',
     situacion:
         '¿Desde cuándo siente el dolor y por qué zona de la pierna se extiende?\n¿Tiene hormigueo, entumecimiento o pérdida de fuerza?\n¿Qué diagnóstico, estudios o tratamientos ha recibido hasta ahora?',
     problema:
@@ -55,6 +59,8 @@ final sintomas = [
         'Disminuir dolor, rigidez y contractura; recuperar el rango de movimiento y complementar los ejercicios, el descanso o la rehabilitación necesarios para evitar nuevas sobrecargas.',
     resultados:
         'Se busca movimiento más libre, menor sensibilidad muscular y mejor tolerancia al trabajo o ejercicio. Los cambios suelen evaluarse por dolor, flexibilidad y función cotidiana.',
+    complementos:
+        'Masaje relajante y terapia de ventosas para descargar tensión; fisioterapia ante lesión o limitación. Un diagnóstico nutricional puede revisar hidratación, energía y nutrientes relacionados con la recuperación muscular.',
     situacion:
         '¿En qué músculos siente dolor y desde cuándo?\n¿Comenzó después de ejercicio, una lesión, una postura prolongada o estrés?\n¿Qué ha probado para aliviarlo y qué resultado obtuvo?',
     problema:
@@ -76,6 +82,8 @@ final sintomas = [
         'Acompañar la recuperación de la movilidad facial, disminuir tensión o espasmos y apoyar funciones como parpadear, sonreír, hablar y comer dentro del tratamiento médico indicado.',
     resultados:
         'La evolución esperada es gradual y puede reflejarse en mayor simetría y control muscular. Se compara periódicamente el cierre del ojo, la sonrisa y otras funciones faciales.',
+    complementos:
+        'Fisioterapia facial para apoyar el control y la coordinación muscular, solo después de la valoración médica. El masaje suave puede considerarse si se autoriza, y un diagnóstico nutricional puede apoyar una alimentación adecuada durante la recuperación.',
     situacion:
         '¿Cuándo comenzó la debilidad facial y apareció de forma repentina?\n¿Puede cerrar por completo el ojo y mover la frente del lado afectado?\n¿Ya fue valorado por un médico y qué tratamiento le indicó?',
     problema:
@@ -97,6 +105,8 @@ final sintomas = [
         'Reducir el estrés y la tensión del proceso, favorecer descanso y bienestar general, y brindar acompañamiento complementario coordinado con el equipo de reproducción o fertilidad.',
     resultados:
         'Los resultados esperados se centran en bienestar: mayor relajación, mejor sueño y mejor tolerancia emocional al tratamiento. No se garantiza embarazo ni se reemplaza la atención especializada.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden favorecer calma y bienestar. Un diagnóstico nutricional permite valorar el estado nutricional y crear recomendaciones individualizadas, todo coordinado con el especialista en fertilidad.',
     situacion:
         '¿Desde hace cuánto intentan lograr un embarazo?\n¿Ambos miembros de la pareja ya recibieron una evaluación de fertilidad?\n¿Actualmente siguen algún tratamiento o procedimiento de reproducción asistida?',
     problema:
@@ -118,6 +128,8 @@ final sintomas = [
         'Ayudar a controlar ardor, dolor o náusea, disminuir la respuesta al estrés y facilitar que la persona mantenga su alimentación y el tratamiento indicado con mayor comodidad.',
     resultados:
         'Se espera menor intensidad o frecuencia de las molestias y mejor tolerancia a las comidas. El avance se mide sin suspender medicamentos ni controles médicos.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden acompañar el manejo del estrés. Un diagnóstico nutricional ayuda a reconocer alimentos, porciones y horarios desencadenantes sin reemplazar el diagnóstico médico ni los medicamentos.',
     situacion:
         '¿Qué síntomas presenta y desde cuándo?\n¿Las molestias cambian con la comida, el ayuno, el café, alcohol o medicamentos?\n¿Cuenta con diagnóstico y sabe qué causa está tratando su médico?',
     problema:
@@ -139,6 +151,8 @@ final sintomas = [
         'Reducir dolor, inflamación percibida y tensión asociada al estrés, mejorar la comodidad cotidiana y complementar el plan gastroenterológico y nutricional según la causa diagnosticada.',
     resultados:
         'Puede observarse menor intensidad o frecuencia de episodios y más libertad para realizar actividades. Conviene registrar dolor, evacuaciones y desencadenantes para valorar cambios.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden apoyar la regulación del estrés. Un diagnóstico nutricional permite revisar tolerancias, fibra, hidratación y patrones de evacuación, integrado al seguimiento gastroenterológico.',
     situacion:
         '¿Desde cuándo presenta dolor, inflamación o cambios en las evacuaciones?\n¿Tiene un diagnóstico específico y ha identificado alimentos o situaciones desencadenantes?\n¿Con qué frecuencia ocurren los episodios?',
     problema:
@@ -160,6 +174,8 @@ final sintomas = [
         'Apoyar el manejo del estrés, el descanso y la constancia con hábitos sostenibles, siempre como complemento de un plan nutricional, de movimiento y de atención médica cuando corresponda.',
     resultados:
         'Se esperan mejoras en adherencia, bienestar y energía más que una cifra específica en la báscula. El progreso debe evaluarse con hábitos y metas de salud acordadas con profesionales.',
+    complementos:
+        'El diagnóstico nutricional es la base para definir necesidades y hábitos sostenibles. Puede acompañarse de Auriculoterapia para ansiedad o antojos y Fisioterapia si el dolor limita la actividad; ningún complemento aislado garantiza bajar de peso.',
     situacion:
         '¿Qué objetivo de salud desea alcanzar y desde cuándo trabaja en él?\n¿Qué hábitos, programas o tratamientos ha probado?\n¿Tiene alguna condición médica o medicamento que influya en su peso?',
     problema:
@@ -181,6 +197,8 @@ final sintomas = [
         'Favorecer la relajación antes de dormir, reducir la tensión que dificulta el descanso y complementar hábitos de sueño y el tratamiento de las causas médicas o emocionales identificadas.',
     resultados:
         'Puede disminuir el tiempo para conciliar el sueño o los despertares y mejorar la sensación de descanso. Se valora con un registro de sueño y energía durante el día.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden favorecer la relajación antes de dormir. Un diagnóstico nutricional ayuda a revisar cafeína, alcohol, horarios y cenas que afectan el sueño, junto con la atención de causas persistentes.',
     situacion:
         '¿Desde cuándo tiene problemas de sueño y cuántas noches por semana ocurren?\n¿Le cuesta dormir, se despierta durante la noche o demasiado temprano?\n¿Qué rutinas, medicamentos o tratamientos ha probado?',
     problema:
@@ -202,6 +220,8 @@ final sintomas = [
         'Disminuir tensión física y sensación de alerta, favorecer momentos de calma y complementar las herramientas de psicoterapia, autocuidado y atención médica indicadas para la ansiedad.',
     resultados:
         'Se busca menor intensidad de la tensión, mejor descanso y mayor capacidad para realizar actividades cotidianas. El avance debe revisarse junto con el tratamiento de salud mental.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden disminuir la tensión física. Un diagnóstico nutricional puede revisar patrones de comida, estimulantes y deficiencias que influyen en el bienestar; no sustituyen psicoterapia, evaluación médica ni medicamentos.',
     situacion:
         '¿Desde cuándo siente ansiedad y en qué situaciones aparece con mayor intensidad?\n¿Qué síntomas físicos o pensamientos nota durante un episodio?\n¿Ha recibido apoyo psicológico o médico y qué le ha funcionado?',
     problema:
@@ -223,6 +243,8 @@ final sintomas = [
         'Promover relajación, aliviar manifestaciones físicas del estrés y apoyar rutinas de descanso y autocuidado dentro de un plan profesional de salud emocional cuando sea necesario.',
     resultados:
         'Puede percibirse menor tensión, mejor descanso y mayor disposición para las actividades diarias. Los cambios emocionales persistentes deben seguirse con el profesional correspondiente.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden integrarse como espacios de autocuidado. Un diagnóstico nutricional ayuda a revisar regularidad, calidad y suficiencia de la alimentación; los cambios de ánimo persistentes corresponden a profesionales de salud mental.',
     situacion:
         '¿Qué cambios emocionales ha notado y desde cuándo?\n¿Hay situaciones, horarios o síntomas físicos relacionados?\n¿Cuenta actualmente con apoyo psicológico, médico o de personas cercanas?',
     problema:
@@ -244,6 +266,8 @@ final sintomas = [
         'Reducir el dolor del talón y la tensión de la planta del pie, facilitar una pisada más cómoda y apoyar los estiramientos, ajustes de carga, calzado y fisioterapia.',
     resultados:
         'Se espera menor dolor en los primeros pasos y mayor tolerancia al caminar o permanecer de pie. El progreso se mide por dolor matutino y tiempo de actividad.',
+    complementos:
+        'Fisioterapia para estiramiento, fuerza y ajuste de cargas; masaje relajante o terapia de ventosas para tensión de pantorrilla. Un diagnóstico nutricional puede apoyar el control de peso, la recuperación y la salud musculoesquelética.',
     situacion:
         '¿Desde cuándo siente dolor y en qué punto del pie se concentra?\n¿Es más intenso al levantarse, caminar o permanecer de pie?\n¿Qué calzado, ejercicios o tratamientos ha utilizado?',
     problema:
@@ -265,6 +289,8 @@ final sintomas = [
         'Reducir la frecuencia, intensidad o duración de las crisis, apoyar la prevención y disminuir su impacto cotidiano sin sustituir medicamentos ni el seguimiento neurológico indicado.',
     resultados:
         'Algunas personas presentan menos días de migraña o crisis más manejables. Un diario de cefalea permite comparar frecuencia, duración, intensidad y uso de medicación.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden apoyar la relajación. Un diagnóstico nutricional ayuda a reconocer desencadenantes, hidratación y regularidad de comidas; deben integrarse al plan preventivo indicado por el profesional.',
     situacion:
         '¿Con qué frecuencia aparecen las crisis, cuánto duran y dónde siente el dolor?\n¿Tiene aura, náusea o sensibilidad a la luz y al sonido?\n¿Qué desencadenantes y tratamientos ha identificado hasta ahora?',
     problema:
@@ -286,6 +312,8 @@ final sintomas = [
         'Apoyar la relajación, el descanso y el manejo de molestias asociadas sin modificar la medicación ni intentar sustituir el control hormonal y los análisis indicados por el especialista.',
     resultados:
         'Los resultados se limitan a bienestar, estrés o síntomas acompañantes; no se promete normalizar hormonas. Los valores tiroideos y ajustes de tratamiento corresponden al seguimiento médico.',
+    complementos:
+        'Auriculoterapia y masaje relajante pueden apoyar el manejo del estrés. Un diagnóstico nutricional permite adaptar la alimentación al diagnóstico y tratamiento; no regula hormonas ni reemplaza medicación, análisis o endocrinología.',
     situacion:
         '¿Cuál es su diagnóstico tiroideo y cuándo fue su último control médico?\n¿Qué síntomas persisten y cómo han cambiado sus análisis?\n¿Toma su medicamento de forma regular y ha comentado estas molestias con su especialista?',
     problema:
@@ -307,6 +335,8 @@ final sintomas = [
         'Disminuir dolor y rigidez, favorecer descanso y movilidad, y apoyar una participación gradual en actividades dentro del manejo integral indicado para la fibromialgia.',
     resultados:
         'Puede haber menor intensidad del dolor, mejor sueño o mayor tolerancia a la actividad. La respuesta varía y debe medirse con metas funcionales realistas a lo largo de varias sesiones.',
+    complementos:
+        'Fisioterapia con actividad gradual para conservar movilidad, además de masaje relajante o auriculoterapia para tensión y descanso. Un diagnóstico nutricional apoya energía y salud general; las ventosas requieren valorar sensibilidad y tolerancia.',
     situacion:
         '¿Desde cuándo tiene dolor generalizado y qué diagnóstico recibió?\n¿Qué zonas, horarios o actividades agravan sus síntomas?\n¿Qué tratamientos y rutinas utiliza actualmente?',
     problema:

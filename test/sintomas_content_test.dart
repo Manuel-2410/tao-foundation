@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tao/data/sintomas_data.dart';
+import 'package:tao/screens/diagnostico/comparador_tratamientos_dialog.dart';
 
 void main() {
   test('every symptom has complete, specific content', () {
@@ -22,8 +23,22 @@ void main() {
       expect(sintoma.comoayuda.length, greaterThan(100));
       expect(sintoma.objetivos.length, greaterThan(100));
       expect(sintoma.resultados.length, greaterThan(100));
+      expect(sintoma.complementos.length, greaterThan(100));
       expect(sintoma.objetivos, isNot(contains('¿')));
       expect(sintoma.resultados, isNot(contains('¿')));
+      expect(
+        sintoma.complementos.toLowerCase(),
+        contains('diagnóstico nutricional'),
+      );
+      expect(
+        sintoma.complementos,
+        anyOf(
+          contains('Auriculoterapia'),
+          contains('Terapia de ventosas'),
+          contains('Masaje relajante'),
+          contains('Fisioterapia'),
+        ),
+      );
     }
   });
 
@@ -35,9 +50,21 @@ void main() {
         sintoma.comoayuda,
         sintoma.objetivos,
         sintoma.resultados,
+        sintoma.complementos,
       ]) {
         expect(sections.add(text), isTrue);
       }
+    }
+  });
+
+  test('every symptom has a specific oriental medicine approach', () {
+    expect(enfoqueOrientalPorSintoma, hasLength(sintomas.length));
+
+    for (final sintoma in sintomas) {
+      final enfoque = enfoqueOrientalPorSintoma[sintoma.nombre];
+      expect(enfoque, isNotNull);
+      expect(enfoque!.length, greaterThan(150));
+      expect(enfoque.toLowerCase(), contains('acupuntura'));
     }
   });
 }

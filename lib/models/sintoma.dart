@@ -6,6 +6,7 @@ class Sintoma {
   final String comoayuda;
   final String objetivos;
   final String resultados;
+  final String complementos;
   final String situacion;
   final String problema;
   final String implicacion;
@@ -19,6 +20,7 @@ class Sintoma {
     required this.comoayuda,
     required this.objetivos,
     required this.resultados,
+    required this.complementos,
     required this.situacion,
     required this.problema,
     required this.implicacion,
